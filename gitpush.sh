@@ -1,10 +1,15 @@
-git add .
+#!/bin/sh
+while true
+do
+    git add .
 
-echo 'Enter the commit message:'
-read commitMessage
+    echo 'Enter the commit message:'
+    read commitMessage
 
-git commit -m "$commitMessage"
+    git commit -m "$commitMessage"
 
-git push origin master
+    git push origin master
 
-read
+    sleep 300
+    read
+done
